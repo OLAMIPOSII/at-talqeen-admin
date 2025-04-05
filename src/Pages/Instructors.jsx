@@ -52,7 +52,7 @@ const Instructors = () => {
             </div>
           </div>
           {/* Header row */}
-          <div className="grid grid-cols-5 gap-4 text-lg font-semibold bg-gray-100 py-2 px-4 mb-4">
+          <div className="grid items-center text-[#344054] text-[12px] grid-cols-5 gap-4 text-lg font-medium bg-gray-100 py-2 px-4 mb-4">
             <p>Name</p>
             <p>Nationality</p>
             <p>Date Registered</p>
@@ -64,21 +64,25 @@ const Instructors = () => {
           {instructorDataList.map((instructorData) => (
             <div
               key={instructorData.id}
-              className="grid grid-cols-5 gap-4 border-b py-2 px-4 hover:bg-gray-50"
+              className="grid items-center grid-cols-5 gap-4 border-b py-2 px-4 hover:bg-gray-50"
             >
               <div className="flex items-center">
                 <p>
                   <img src={instructorData.image} alt="" />
                 </p>
                 <div className="col ml-3">
-                  <p className="text-[14px]">{instructorData.name}</p>
-                  <p className="text-[14px] text-[#344054] font-base">
+                  <p className="text-[14px] font-medium">
+                    {instructorData.name}
+                  </p>
+                  <p className="text-[14px] text-[#344054] font-regular">
                     {instructorData.email}
                   </p>
                 </div>
               </div>
               <p>{instructorData.nationality}</p>
-              <p>{instructorData.dateRegistered}</p>
+              <p className="text-[#344054] text-[14px] font-regular">
+                {instructorData.dateRegistered}
+              </p>
 
               {/* Rendering status icon as an image */}
               <p>

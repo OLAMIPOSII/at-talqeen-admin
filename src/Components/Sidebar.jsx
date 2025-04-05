@@ -10,7 +10,6 @@ const Sidebar = () => {
     setActiveLink(location.pathname);
   }, [location]);
 
-  // Function to check if the link is active
   const isActiveLink = (path) => activeLink === path;
 
   return (
@@ -24,7 +23,6 @@ const Sidebar = () => {
           />
         </div>
         <ul className="mt-1 flex flex-col flex-grow">
-          {/* Dashboard Link */}
           <li
             className={`flex items-center px-6 py-3 ${
               isActiveLink("/dashboard")
@@ -50,7 +48,6 @@ const Sidebar = () => {
             </Link>
           </li>
 
-          {/* Instructors Link */}
           <li
             className={`flex items-center px-6 py-3 ${
               isActiveLink("/instructors")
@@ -76,7 +73,6 @@ const Sidebar = () => {
             </Link>
           </li>
 
-          {/* Students Link */}
           <li
             className={`flex items-center px-6 py-3 ${
               isActiveLink("/students")
@@ -102,7 +98,6 @@ const Sidebar = () => {
             </Link>
           </li>
 
-          {/* Bookings Link */}
           <li
             className={`flex items-center px-6 py-3 mb-60 ${
               isActiveLink("/bookings")
@@ -129,7 +124,6 @@ const Sidebar = () => {
           </li>
 
           <div className="mt-auto">
-            {/* Settings Link */}
             <li
               className={`flex px-6 py-3 items-center ${
                 isActiveLink("/settings")
@@ -155,7 +149,6 @@ const Sidebar = () => {
               </Link>
             </li>
 
-            {/* User Profile and Signout */}
             <li
               className={`px-6 py-3 mt-0 flex items-center justify-between ${
                 isActiveLink("/signout")
